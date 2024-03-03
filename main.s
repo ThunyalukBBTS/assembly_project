@@ -11,10 +11,10 @@ extern  print_string
 section .text
 _start:
     mov     rdx, 0          ; clear reg edx for remainder
-    movsx   rax, byte [a]   ; set divide variable into register rax, rbx then div
-    movsx   rbx, byte [b]
+    movzx   rax, byte [a]   ; set divide variable into register rax, rbx then div
+    movzx   rbx, byte [b]
     div     rbx
-    movsx   rdi, byte [b]
+    movzx   rdi, byte [b]
     mov     rsi, rdx
     mov     rdx, rax
     call    calculate_remainder

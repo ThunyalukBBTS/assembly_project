@@ -43,7 +43,7 @@ calculate_remainder:
     ; mov     rdi, newLine
     ; call    print_string
 
-    movsx     rax, byte [rem]
+    movzx     rax, byte [rem]
     mov     r10, 4  ; set loop counter to 4 round
     mov     r12, [denominator]
     mov     r13, 10
